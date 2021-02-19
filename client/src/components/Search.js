@@ -1,10 +1,10 @@
 import React from 'react'
 
-function Search() {
+function Search(props) {
     return (
         <div className="searchbar">
             <form action="">
-                <input type="text" />
+                <input onChange={props.handleSearch} type="text" />
                 <button type="submit">Search</button>
             </form>
             
