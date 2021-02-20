@@ -1,3 +1,4 @@
+import { request } from 'express';
 import React, { Component } from 'react'
 import Search from './Search'
 
@@ -11,6 +12,12 @@ class Books extends Component {
 
         }
     }
+
+
+    searchBooks = () => {
+        request.get("https://www.googleapis.com/books/v1/volumes?q=search+terms")
+    }
+
 
     handleSearch = (e) => {
         
